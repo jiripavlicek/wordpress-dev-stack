@@ -15,27 +15,6 @@ services:
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
-      WORDPRESS_CONFIG_EXTRA: |
-
-        /* development parameters */
-        define('WP_CACHE', false);
-        define('ENVIRONMENT', 'local');
-
-        /* Configure mail server */
-        define('WORDPRESS_SMTP_AUTH', false);
-        define('WORDPRESS_SMTP_SECURE', '');
-        define('WORDPRESS_SMTP_HOST', 'mailhog');
-        define('WORDPRESS_SMTP_PORT', '1025');
-        define('WORDPRESS_SMTP_USERNAME', null);
-        define('WORDPRESS_SMTP_PASSWORD', null);
-        define('WORDPRESS_SMTP_FROM', 'no-reply@demo.com');
-        define('WORDPRESS_SMTP_FROM_NAME', 'Demo');
-
-        if(!defined('WP_HOME')) {
-          /* force our home url */
-          define('WP_HOME', 'http://localhost');
-          define('WP_SITEURL', WP_HOME);
-        }
     volumes:
       - ./wordpress:/var/www/html:delegated
 

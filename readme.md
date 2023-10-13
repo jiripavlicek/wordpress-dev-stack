@@ -2,7 +2,7 @@
 
 ## Run for the first time
 
-1. check if ports 80, 3306 and 8080 are available
+1. check if ports 80, 3306, 8080, 1025 and 8025 are available
     1. check if anything listens required ports with `netstat -l | grep 'http\|mysql\|http-alt\|1025\|8025'`
     2. if yes, then stop it with something like `sudo service nginx stop`, `sudo service apache2 stop`, `docker stop XXX` or so on...
 2. `cd ~`

@@ -47,7 +47,7 @@
 
 ## Remove the dev stack
 
-1. `docker rm wordpress-dev-stack_wordpress_1 wordpress-dev-stack_mysql_1 wordpress-dev-stack_adminer_1 wordpress-dev-stack_mailhog_1`
+1. `docker-compose rm`
 2. use `docker images` to get container IDS
 3. `docker rmi XXX` (where XXX are container's IDS)
 
